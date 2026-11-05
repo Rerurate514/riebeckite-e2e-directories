@@ -98,12 +98,12 @@ The first deploy creates the Worker and the custom domain. Cloudflare manages th
 
 `.github/workflows/publish.yml` runs when `site/**`, `vault/**`, or the workflow itself changes on `main`. All run steps use `site/` as the working directory.
 
-Required repository secrets:
+Required repository credentials:
 
-| Secret | Purpose |
-| --- | --- |
-| `CLOUDFLARE_API_TOKEN` | Workers Scripts:Edit for the account |
-| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account ID |
+| Name | Kind | Purpose |
+| --- | --- | --- |
+| `CLOUDFLARE_API_TOKEN` | Secret | Workers Scripts:Edit for the account |
+| `CLOUDFLARE_ACCOUNT_ID` | Variable | Cloudflare account ID |
 
 ## Content in this sample
 
@@ -112,7 +112,8 @@ Required repository secrets:
 ## Related documentation
 
 - [Quick Start](https://riebeckite.dev/getting-started/quick-start)
-- [Content location](https://riebeckite.dev/guides/content-repositories/basics)
+- [Content location](https://riebeckite.dev/getting-started/content-location)
+- [Separate directories setup](https://riebeckite.dev/getting-started/separate-directories-setup)
 - [Cloudflare Workers deployment](https://riebeckite.dev/guides/deployment/cloudflare-workers)
 - [GitHub Actions deployment](https://riebeckite.dev/guides/deployment/github-actions)
 
