@@ -125,6 +125,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID || secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: site
+          wranglerVersion: "4"
           command: deploy
 
       - name: Record publication state
