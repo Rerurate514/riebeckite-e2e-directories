@@ -109,6 +109,12 @@ Required repository credentials:
 
 `vault/index.md` explains the layout. `vault/notes/` demonstrates frontmatter, tags, WikiLinks, backlinks, Markdown links, tables, code, Mermaid, and images. The source image is in `vault/assets/`; the downloadable text attachment is in `site/public/assets/`.
 
+## Continuous E2E
+
+This repository tracks the latest stable `@riebeckite/*` release, so it tests the package as an external consumer rather than through a workspace link.
+
+To validate a release candidate, create a branch, pin the candidate version in `site/package.json`, run `npm install`, `npm exec -- riebeckite check`, and `npm exec -- riebeckite build` from `site/`, then push the branch and run the publish workflow with `workflow_dispatch`. Keep the version in the commit message. Do not merge the candidate branch until the deploy succeeds; `main` remains on the stable release.
+
 ## Related documentation
 
 - [Quick Start](https://riebeckite.dev/getting-started/quick-start)
